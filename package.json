@@ -1,0 +1,30 @@
+{
+  "name": "ff-google-search-results-navigator",
+  "version": "1.0.0",
+  "description": "Firefox extension that allows you to navigate between google search result links by keyboard",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && web-ext run -f=firefoxdeveloperedition",
+    "build": "node ./scripts/build.cjs",
+    "build:extension": "web-ext build"
+  },
+  "webExt": {
+    "sourceDir": "dist"
+  },
+  "keywords": [
+    "firefox",
+    "ff",
+    "extension",
+    "addon",
+    "navigate by keyboard"
+  ],
+  "author": "prohorovgosa@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "10.0.1",
+    "rollup": "3.7.4",
+    "typescript": "4.9.4",
+    "web-ext": "7.4.0"
+  }
+}

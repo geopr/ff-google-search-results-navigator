@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "GoogleSearchResultsNavigator",
+  "version": "1.0",
+  "description": "firefox extension that allows you to navigate between google search result links by keyboard",
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://www.google.com/search?q=*"],
+      "js": ["index.js"]
+    }
+  ]
+}
+
