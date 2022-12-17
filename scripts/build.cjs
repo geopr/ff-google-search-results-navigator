@@ -12,12 +12,13 @@ function bundle() {
 
 function copyManifestFileToDist() {
   const
-    manifestFrom = path.join(__dirname, '../manifest.json'),
-    manifestTo = path.join(__dirname, '../dist/manifest.json');
+    manifest = 'manifest.json',
+    sourcePath = path.join(__dirname, `../${manifest}`),
+    distPath = path.join(__dirname, `../dist/${manifest}`);
 
-  fs.copyFile(manifestFrom, manifestTo, e => {
+  fs.copyFile(sourcePath, distPath, e => {
     if (e != null) {
-      console.error(`failed to copy a ${file} to dist: ${e.message}`);
+      console.error(`failed to copy ${manifest} to dist: ${e.message}`);
       process.exit(1);
     }
   });
